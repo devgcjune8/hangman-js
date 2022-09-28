@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Guess the hidden word - Type a letter</p>
+    <div class="game-wrapper">
+        <svg height='300px' width='250px'class="stick-figure">
+            <!-- Hang -->
+            <line x1='60' y1='20' x2='150' y2='20'/>
+            <line x1='150' y1='20' x2='150' y2='50'/>
+            <line x1='60' y1='20' x2='60' y2='250'/>
+            <line x1='10' y1='250' x2='150' y2='250'/>
+
+            <!-- Man -->
+            <circle cx='150' cy='74' r='23' class="man"/>
+            <line x1='150' y1='97' x2='150' y2='170' class="man"/>
+            <line x1='150' y1='120' x2='125' y2='120' class="man"/>
+            <line x1='150' y1='120' x2='175' y2='120' class="man"/>
+            <line x1='150' y1='170' x2='125' y2='200' class="man"/>
+            <line x1='150' y1='170' x2='175' y2='200' class="man"/>
+        </svg>
+
+        <div class="wrong-letter-wrapper">
+            <div class="wrong-letters"></div>
+        </div>
+
+        <div class="word">
+            
+        </div>
+    </div>
+
+    <div class="game-over-popup">
+        <div class="popup">
+            <h4 class="final-verdict"></h4>
+            <button class="play-btn">Play Again</button>
+        </div>
+    </div>
+
+    <div class="letter-notif">
+        <p class="letter-display"></p>
+    </div>
+    <div class="toast-notif">
+        <p>You typed this letter earlier in this session</p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
